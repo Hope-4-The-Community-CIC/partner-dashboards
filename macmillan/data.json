@@ -38,5 +38,10 @@
       "history": []
     }
   ],
-  "waitlists": []
+  "waitlists": [
+    {
+      "name": "Waitlist",
+      "count": 0
+    }
+  ]
 }
