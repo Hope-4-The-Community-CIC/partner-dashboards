@@ -1,0 +1,80 @@
+{
+  "updatedAt": "2026-08-06",
+  "routes": [
+    {
+      "id": "group-2026-06-24",
+      "name": "24/06/2026",
+      "type": "group",
+      "date": "2026-06-24",
+      "count": 119,
+      "target": 119,
+      "history": [
+        {
+          "date": "2026-08-07",
+          "count": 119
+        }
+      ]
+    },
+    {
+      "id": "group-2026-09-09",
+      "name": "09/09/2026",
+      "type": "group",
+      "date": "2026-09-09",
+      "count": 7,
+      "target": 80,
+      "history": [
+        {
+          "date": "2026-08-07",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "group-2026-11-04",
+      "name": "04/11/2026",
+      "type": "group",
+      "date": "2026-11-04",
+      "count": 4,
+      "target": 80,
+      "history": [
+        {
+          "date": "2026-08-07",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "self-guided-ncpcn",
+      "name": "Self-guided",
+      "type": "self",
+      "date": null,
+      "count": 50,
+      "target": 300,
+      "cohort": "NCPCN-LTC-SELF-140726",
+      "history": [
+        {
+          "date": "2026-07-23",
+          "count": 9
+        },
+        {
+          "date": "2026-07-30",
+          "count": 27
+        },
+        {
+          "date": "2026-08-06",
+          "count": 50
+        }
+      ]
+    }
+  ],
+  "waitlists": [
+    {
+      "name": "From PCN area  - group course full",
+      "count": 0
+    },
+    {
+      "name": "Outside Newport & Central PCN area",
+      "count": 4
+    }
+  ]
+}

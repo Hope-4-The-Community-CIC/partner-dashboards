@@ -1,0 +1,15 @@
+{
+  "partnerName": "Newport and Central PCN",
+  "programmeName": "Hope Programme recruitment",
+  "h4cLogo": "assets/h4c-logo.png",
+  "hopeProgrammeLogo": "assets/hope-programme-logo.png",
+  "partnerLogo": "",
+  "showWaitlists": true,
+  "pastDefaultMonths": 12,
+  "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_cvy7ROwKy6NBcfI?format=csv",
+  "weeklySnapshotWeekday": 3,
+  "waitlistLabels": {
+    "Waitlist - from PCN area - group course full": "From Newport & Central PCN area",
+    "Waitlist - outside PCN area": "Outside Newport & Central PCN area"
+  }
+}
