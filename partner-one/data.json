@@ -1,11 +1,24 @@
 {
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-06",
   "selfGuided": [
     {
       "name": "Self-guided Hope Programme",
-      "count": 0,
-      "target": 5000
+      "count": 50,
+      "target": 300
     }
   ],
-  "weeklyHistory": []
+  "weeklyHistory": [
+    {
+      "date": "2026-07-23",
+      "count": 9
+    },
+    {
+      "date": "2026-07-30",
+      "count": 27
+    },
+    {
+      "date": "2026-08-06",
+      "count": 50
+    }
+  ]
 }
