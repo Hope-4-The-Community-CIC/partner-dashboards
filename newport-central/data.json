@@ -1,0 +1,52 @@
+{
+  "updatedAt": "2026-08-06",
+  "groupCourses": [
+    {
+      "name": "24/06/2026",
+      "count": 119,
+      "target": 119
+    },
+    {
+      "name": "09/09/2026",
+      "count": 8,
+      "target": 80
+    },
+    {
+      "name": "04/11/2026",
+      "count": 4,
+      "target": 80
+    }
+  ],
+  "selfGuided": {
+    "name": "Self-guided",
+    "count": 50,
+    "target": 300,
+    "cohort": "NCPCN-LTC-SELF-140726"
+  },
+  "waitlists": [
+    {
+      "name": "Waitlist - from PCN area\u00a0 - group course full",
+      "count": 0,
+      "target": 500
+    },
+    {
+      "name": "Waitlist - outside PCN area",
+      "count": 3,
+      "target": 500
+    }
+  ],
+  "weeklyHistory": [
+    {
+      "date": "2026-07-23",
+      "count": 9
+    },
+    {
+      "date": "2026-07-30",
+      "count": 27
+    },
+    {
+      "date": "2026-08-06",
+      "count": 50
+    }
+  ]
+}
