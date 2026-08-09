@@ -170,11 +170,12 @@ def update_partner(folder):
             data["waitlists"] = new_waitlists
             changed = True
 
-    # The public dashboard's "updated" date should reflect a successful refresh.
-    # It is updated daily, not every 15 minutes, so the display stays clean.
-    if data.get("updatedAt") != today:
-        data["updatedAt"] = today
-        changed = True
+   # Record the exact time of the successful refresh.
+updated_at = now.astimezone().isoformat(timespec="minutes")
+
+if data.get("updatedAt") != updated_at:
+    data["updatedAt"] = updated_at
+    changed = True
 
     if changed:
         data_path.write_text(
