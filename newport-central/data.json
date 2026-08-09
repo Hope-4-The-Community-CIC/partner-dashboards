@@ -51,6 +51,7 @@
       "count": 50,
       "target": 300,
       "cohort": "NCPCN-LTC-SELF-140726",
+      "historyStartsAtZero": true,
       "history": [
         {
           "date": "2026-07-23",
