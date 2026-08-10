@@ -5,6 +5,7 @@ import os
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -19,7 +20,9 @@ def normalise_date(value):
 
     # Handles ISO dates
     try:
-        return datetime.fromisoformat(value.replace("Z", "+00:00")).date().isoformat()
+        return datetime.fromisoformat(
+            value.replace("Z", "+00:00")
+        ).date().isoformat()
     except ValueError:
         pass
 
@@ -63,8 +66,9 @@ if quota is not None:
 
 history = self_route.setdefault("history", [])
 
-# Store cumulative enrolment. The dashboard calculates weekly uptake
-# from the difference between consecutive cumulative snapshots.
+# Store cumulative enrolment.
+# The dashboard calculates weekly uptake from the difference
+# between consecutive cumulative snapshots.
 if history and history[-1].get("date") == latest_date:
     history[-1]["count"] = enrolled
 else:
@@ -73,10 +77,18 @@ else:
         "count": enrolled
     })
 
-data["updatedAt"] = latest_date
+# The reporting date belongs to the history above.
+# updatedAt should show when the dashboard itself was refreshed.
+data["updatedAt"] = datetime.now(
+    ZoneInfo("Europe/London")
+).isoformat(timespec="minutes")
 
 with open(data_file, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
     f.write("\n")
 
-print(f"Updated {dashboard}: {enrolled} enrolled")
+print(
+    f"Updated {dashboard}: {enrolled} enrolled; "
+    f"reporting date {latest_date}; "
+    f"dashboard refreshed {data['updatedAt']}"
+)
