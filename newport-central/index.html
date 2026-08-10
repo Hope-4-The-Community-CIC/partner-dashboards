@@ -259,6 +259,52 @@ h2{
   margin-right:8px
 }
 
+.contract-summary{
+  margin-top:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px 20px
+}
+
+.contract-summary-row{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap
+}
+
+.contract-summary-title{
+  font-size:20px;
+  font-weight:700
+}
+
+.contract-summary-value{
+  font-size:28px;
+  font-weight:700
+}
+
+.contract-summary-meta{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.contract-progress{
+  margin-top:12px;
+  height:10px;
+  background:var(--track);
+  border-radius:999px;
+  overflow:hidden
+}
+
+.contract-progress-fill{
+  height:100%;
+  background:var(--blue);
+  border-radius:999px
+}
+
 .past-box{
   background:#fff;
   border:1px solid var(--line);
@@ -441,6 +487,25 @@ th{
   <div id="waitlists" class="waitlist"></div>
 </section>
 
+<section class="contract-summary" id="contractSummary" style="display:none;">
+  <div class="contract-summary-row">
+    <div>
+      <div class="contract-summary-title">Total recruitment</div>
+      <div class="contract-summary-meta">
+        Includes current and past courses, self-guided registrations and waiting lists.
+      </div>
+    </div>
+
+    <div class="contract-summary-value" id="contractSummaryValue"></div>
+  </div>
+
+  <div class="contract-summary-meta" id="contractSummaryPercent"></div>
+
+  <div class="contract-progress">
+    <div class="contract-progress-fill" id="contractProgressFill" style="width:0%"></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="past-box" id="pastBox">
 
@@ -603,17 +668,6 @@ function latestDelta(history){
 }
 
 
-/*
-  Weekly uptake
-
-  Most dashboards treat the first history point as a baseline.
-
-  If a route contains:
-  "historyStartsAtZero": true
-
-  the first recorded count is treated as genuine uptake from zero
-  and is therefore displayed as the first weekly increase.
-*/
 function uptakeBars(history, historyStartsAtZero=false){
 
   if(!history || history.length<1){
@@ -639,11 +693,6 @@ function uptakeBars(history, historyStartsAtZero=false){
 
   const changes=[];
 
-
-  /*
-    For programmes which genuinely started from zero,
-    show the first recorded count as the first uptake value.
-  */
   if(historyStartsAtZero && h.length){
 
     changes.push({
@@ -652,11 +701,6 @@ function uptakeBars(history, historyStartsAtZero=false){
     });
   }
 
-
-  /*
-    Calculate each later week's increase from the
-    previous cumulative total.
-  */
   for(let i=1;i<h.length;i++){
 
     const change =
@@ -669,11 +713,6 @@ function uptakeBars(history, historyStartsAtZero=false){
     });
   }
 
-
-  /*
-    If the first point is only a baseline and there
-    is not yet another point, there is no trend to show.
-  */
   if(!changes.length){
 
     return `
@@ -689,9 +728,7 @@ function uptakeBars(history, historyStartsAtZero=false){
     `;
   }
 
-
   const recent=changes.slice(-6);
-
 
   const max=Math.max(
     1,
@@ -699,7 +736,6 @@ function uptakeBars(history, historyStartsAtZero=false){
       x=>Math.max(0,x.change)
     )
   );
-
 
   const rows=recent.map(x=>{
 
@@ -716,7 +752,6 @@ function uptakeBars(history, historyStartsAtZero=false){
       x.change>0
         ? `+${x.change}`
         : String(x.change);
-
 
     return `
       <div class="uptake-row">
@@ -739,7 +774,6 @@ function uptakeBars(history, historyStartsAtZero=false){
       </div>
     `;
   }).join("");
-
 
   return `
     <div class="uptake-wrap">
@@ -768,7 +802,6 @@ function card(route){
     route.history
   );
 
-
   const title =
     route.type==="self"
       ? "Self-guided"
@@ -777,12 +810,10 @@ function card(route){
           true
         );
 
-
   const unit =
     route.type==="self"
       ? "registrations"
       : "places booked";
-
 
   const delta =
     d===null
@@ -808,11 +839,9 @@ function card(route){
             </div>
           `;
 
-
   const el=document.createElement(
     "article"
   );
-
 
   el.className=
     "card "
@@ -821,7 +850,6 @@ function card(route){
         ? "self"
         : ""
     );
-
 
   el.innerHTML=`
 
@@ -865,8 +893,44 @@ function card(route){
 
   `;
 
-
   return el;
+}
+
+
+function renderContractSummary(data, cfg){
+
+  const target = Number(cfg.contractTarget || 0);
+
+  if(!target){
+    return;
+  }
+
+  const routeTotal = (data.routes || [])
+    .reduce(
+      (sum, route) => sum + Number(route.count || 0),
+      0
+    );
+
+  const waitlistTotal = (data.waitlists || [])
+    .reduce(
+      (sum, item) => sum + Number(item.count || 0),
+      0
+    );
+
+  const total = routeTotal + waitlistTotal;
+  const percent = Math.round(total / target * 100);
+  const cappedPercent = Math.min(100, Math.max(0, percent));
+
+  document.getElementById("contractSummaryValue").textContent =
+    `${total.toLocaleString("en-GB")} of ${target.toLocaleString("en-GB")}`;
+
+  document.getElementById("contractSummaryPercent").textContent =
+    `${percent}% of contract target`;
+
+  document.getElementById("contractProgressFill").style.width =
+    `${cappedPercent}%`;
+
+  document.getElementById("contractSummary").style.display = "";
 }
 
 
@@ -893,10 +957,8 @@ function renderPast(routes,months){
 
   body.innerHTML="";
 
-
   let past=
     routes.filter(isPast);
-
 
   if(months!=="all"){
 
@@ -916,18 +978,15 @@ function renderPast(routes,months){
     );
   }
 
-
   past.sort(
     (a,b)=>
       b.date.localeCompare(a.date)
   );
 
-
   document.getElementById(
     "pastTitle"
   ).textContent=
     `Past courses (${past.length})`;
-
 
   if(!past.length){
 
@@ -942,12 +1001,10 @@ function renderPast(routes,months){
     return;
   }
 
-
   past.forEach(r=>{
 
     const tr=
       document.createElement("tr");
-
 
     tr.innerHTML=`
 
@@ -972,7 +1029,6 @@ function renderPast(routes,months){
       </td>
 
     `;
-
 
     body.appendChild(tr);
   });
@@ -1000,22 +1056,18 @@ async function load(){
 
     ]);
 
-
   document.title=
     `${cfg.partnerName} – Hope Programme recruitment`;
-
 
   document.getElementById(
     "partnerName"
   ).textContent=
     cfg.partnerName;
 
-
   document.getElementById(
     "programmeName"
   ).textContent=
     cfg.programmeName;
-
 
   document.getElementById(
     "updated"
@@ -1024,18 +1076,15 @@ async function load(){
       data.updatedAt
     );
 
-
   document.getElementById(
     "h4cLogo"
   ).src=
     cfg.h4cLogo;
 
-
   document.getElementById(
     "hopeLogo"
   ).src=
     cfg.hopeProgrammeLogo;
-
 
   const active=
     (data.routes || [])
@@ -1045,7 +1094,6 @@ async function load(){
           ||
           !isPast(r)
       );
-
 
   active.sort((a,b)=>{
 
@@ -1063,15 +1111,12 @@ async function load(){
       );
   });
 
-
   const cards=
     document.getElementById(
       "activeCards"
     );
 
-
   cards.innerHTML="";
-
 
   active.forEach(
     r=>
@@ -1080,15 +1125,12 @@ async function load(){
       )
   );
 
-
   const wait=
     document.getElementById(
       "waitlists"
     );
 
-
   wait.innerHTML="";
-
 
   (data.waitlists || [])
     .forEach(x=>{
@@ -1100,7 +1142,6 @@ async function load(){
 
       div.className="wait";
 
-
       div.innerHTML=`
 
         <strong>
@@ -1111,16 +1152,13 @@ async function load(){
 
       `;
 
-
       wait.appendChild(div);
     });
-
 
   const waitSection=
     document.getElementById(
       "waitSection"
     );
-
 
   if(!(data.waitlists || []).length){
 
@@ -1133,24 +1171,25 @@ async function load(){
       "";
   }
 
+  renderContractSummary(
+    data,
+    cfg
+  );
 
   const range=
     document.getElementById(
       "pastRange"
     );
 
-
   range.value=
     String(
       cfg.pastDefaultMonths || 12
     );
 
-
   renderPast(
     data.routes || [],
     range.value
   );
-
 
   range.addEventListener(
     "change",
@@ -1161,18 +1200,15 @@ async function load(){
       )
   );
 
-
   const box=
     document.getElementById(
       "pastBox"
     );
 
-
   const toggle=
     document.getElementById(
       "pastToggle"
     );
-
 
   toggle.addEventListener(
     "click",
@@ -1181,7 +1217,6 @@ async function load(){
       box.classList.toggle(
         "open"
       );
-
 
       document.getElementById(
         "chevron"
