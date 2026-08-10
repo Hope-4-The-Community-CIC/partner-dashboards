@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-self-guided
+  group: partner-dashboard-writes
   cancel-in-progress: false
 
 jobs:
