@@ -6,6 +6,7 @@
   "partnerLogo": "",
   "showWaitlists": true,
   "pastDefaultMonths": 12,
+  "contractTarget": 600,
   "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_cvy7ROwKy6NBcfI?format=csv",
   "weeklySnapshotWeekday": 3,
   "waitlistLabels": {
