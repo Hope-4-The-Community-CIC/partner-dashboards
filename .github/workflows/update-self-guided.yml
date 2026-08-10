@@ -34,7 +34,7 @@ jobs:
         run: |
           python scripts/update_self_guided.py
 
-           - name: Commit updated dashboard
+      - name: Commit updated dashboard
         run: |
           git config user.name "hope-dashboard-bot"
           git config user.email "actions@users.noreply.github.com"
