@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-self-guided
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
