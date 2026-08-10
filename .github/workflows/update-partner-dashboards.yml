@@ -1,9 +1,8 @@
-name: Refresh partner dashboards
+name: Update self-guided dashboard
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "*/15 * * * *"
+  repository_dispatch:
+    types: [update-self-guided]
 
 permissions:
   contents: write
@@ -13,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh:
+  update:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,16 +24,23 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Refresh all configured partner dashboards
-        run: python scripts/update_partner_dashboards.py
+      - name: Update self-guided data
+        env:
+          DASHBOARD_KEY: ${{ github.event.client_payload.dashboard_key }}
+          LATEST_DATE: ${{ github.event.client_payload.latest_date }}
+          WEEKLY_UPTAKE: ${{ github.event.client_payload.weekly_uptake }}
+          ENROLLED_TOTAL: ${{ github.event.client_payload.enrolled_total }}
+          QUOTA: ${{ github.event.client_payload.quota }}
+        run: |
+          python scripts/update_self_guided.py
 
-           - name: Commit refreshed data
+      - name: Commit updated dashboard
         run: |
           git config user.name "hope-dashboard-bot"
           git config user.email "actions@users.noreply.github.com"
 
           git add -- '*/data.json'
-          git diff --cached --quiet || git commit -m "Refresh partner dashboard data"
+          git diff --cached --quiet || git commit -m "Update self-guided dashboard"
 
           git pull --rebase origin main
           git push
