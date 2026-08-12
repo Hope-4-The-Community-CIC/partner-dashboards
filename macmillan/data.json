@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T00:30+01:00",
+  "updatedAt": "2026-08-13T00:37+01:00",
   "routes": [
     {
       "id": "self-guided-macmillan",
@@ -23,7 +23,12 @@
       "date": "2026-11-02",
       "count": 3,
       "target": 100,
-      "history": []
+      "history": [
+        {
+          "date": "2026-08-13",
+          "count": 3
+        }
+      ]
     }
   ],
   "waitlists": [
