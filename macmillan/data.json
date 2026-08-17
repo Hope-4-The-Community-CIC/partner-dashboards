@@ -35,10 +35,5 @@
       ]
     }
   ],
-  "waitlists": [
-    {
-      "name": "Waitlist",
-      "count": 0
-    }
-  ]
+  "waitlists": []
 }
