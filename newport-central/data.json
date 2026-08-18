@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T13:45+01:00",
+  "updatedAt": "2026-08-18T13:50+01:00",
   "routes": [
     {
       "id": "group-2026-06-24",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Outside Newport & Central PCN area",
-      "count": 8
+      "count": 6
     }
   ]
 }
