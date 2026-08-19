@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T00:15+01:00",
+  "updatedAt": "2026-08-20T00:21+01:00",
   "routes": [
     {
       "id": "self-guided-macmillan",
@@ -30,6 +30,10 @@
       "history": [
         {
           "date": "2026-08-13",
+          "count": 0
+        },
+        {
+          "date": "2026-08-20",
           "count": 0
         }
       ]
