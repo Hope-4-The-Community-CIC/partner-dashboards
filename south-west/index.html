@@ -1,1 +1,1197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hope Programme recruitment</title>
 
+<style>
+:root{
+  --blue:#0e76bc;
+  --pink:#ec008c;
+  --orange:#f7941d;
+  --ink:#14232d;
+  --muted:#5e6b73;
+  --bg:#f5f8fb;
+  --card:#fff;
+  --line:#dbe5ec;
+  --track:#e8eef2;
+  --green:#2f7d4b;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--ink)
+}
+
+main{
+  max-width:1180px;
+  margin:0 auto;
+  padding:32px 22px 52px
+}
+
+header{
+  display:grid;
+  grid-template-columns:auto auto 1fr;
+  gap:22px;
+  align-items:center;
+  padding:23px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px
+}
+
+.brand-logo{
+  height:72px;
+  width:auto;
+  max-width:230px;
+  object-fit:contain
+}
+
+.programme-logo{
+  height:62px;
+  width:auto;
+  max-width:210px;
+  object-fit:contain
+}
+
+.title{
+  border-left:1px solid var(--line);
+  padding-left:22px
+}
+
+h1{
+  font-size:30px;
+  line-height:1.15;
+  margin:0 0 7px
+}
+
+.subtitle{
+  margin:0;
+  color:var(--muted);
+  font-size:16px
+}
+
+.section{
+  margin-top:24px
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:end;
+  margin-bottom:12px
+}
+
+h2{
+  font-size:24px;
+  margin:0;
+  color:var(--blue)
+}
+
+.note{
+  color:var(--muted);
+  margin:4px 0 0;
+  font-size:14px
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
+  gap:16px
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  min-height:250px
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+  gap:17px
+}
+
+.gauge{
+  --p:0;
+  --accent:var(--blue);
+  width:104px;
+  height:104px;
+  border-radius:50%;
+  background:conic-gradient(
+    var(--accent) calc(var(--p)*1%),
+    var(--track) 0
+  );
+  position:relative;
+  flex:none
+}
+
+.gauge:after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  background:#fff;
+  border-radius:50%
+}
+
+.gauge span{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  z-index:2;
+  font-size:20px;
+  font-weight:700
+}
+
+.card.self .gauge{
+  --accent:var(--orange)
+}
+
+.programme-name{
+  font-size:14px;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:5px
+}
+
+.card-title{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:5px
+}
+
+.big{
+  font-size:34px;
+  line-height:1;
+  font-weight:700
+}
+
+.small{
+  color:var(--muted);
+  margin-top:6px;
+  font-size:14px
+}
+
+.delta{
+  margin-top:14px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--green)
+}
+
+.delta.neutral{
+  color:var(--muted);
+  font-weight:400
+}
+
+.uptake-wrap{
+  margin-top:12px;
+  border-top:1px solid var(--line);
+  padding-top:10px
+}
+
+.uptake-title{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:8px;
+  font-weight:700
+}
+
+.uptake-bars{
+  display:grid;
+  gap:7px
+}
+
+.uptake-row{
+  display:grid;
+  grid-template-columns:58px 1fr 34px;
+  gap:8px;
+  align-items:center;
+  font-size:12px
+}
+
+.uptake-date{
+  color:var(--muted)
+}
+
+.uptake-track{
+  height:8px;
+  background:var(--track);
+  border-radius:999px;
+  overflow:hidden
+}
+
+.uptake-fill{
+  height:100%;
+  background:var(--blue);
+  border-radius:999px;
+  min-width:2px
+}
+
+.card.self .uptake-fill{
+  background:var(--orange)
+}
+
+.uptake-value{
+  font-weight:700;
+  text-align:right
+}
+
+.waitlist{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:12px
+}
+
+.wait{
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:5px solid var(--orange);
+  border-radius:12px;
+  padding:14px 16px
+}
+
+.wait-programme{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:5px
+}
+
+.wait strong{
+  font-size:25px;
+  margin-right:8px
+}
+
+.contract-summary{
+  margin-top:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px 20px
+}
+
+.contract-summary-row{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap
+}
+
+.contract-summary-title{
+  font-size:20px;
+  font-weight:700
+}
+
+.contract-summary-value{
+  font-size:28px;
+  font-weight:700
+}
+
+.contract-summary-meta{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.contract-progress{
+  margin-top:12px;
+  height:10px;
+  background:var(--track);
+  border-radius:999px;
+  overflow:hidden
+}
+
+.contract-progress-fill{
+  height:100%;
+  background:var(--blue);
+  border-radius:999px
+}
+
+.past-box{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden
+}
+
+.past-toggle{
+  width:100%;
+  border:0;
+  background:#fff;
+  padding:17px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font:inherit;
+  font-weight:700;
+  color:var(--ink);
+  cursor:pointer;
+  text-align:left
+}
+
+.past-controls{
+  padding:0 20px 14px;
+  display:none;
+  justify-content:flex-end;
+  align-items:center;
+  gap:8px
+}
+
+.past-controls label{
+  font-size:13px;
+  color:var(--muted)
+}
+
+.past-controls select{
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:7px 9px;
+  background:#fff
+}
+
+.past-content{
+  display:none;
+  padding:0 20px 18px;
+  overflow-x:auto
+}
+
+.past-box.open .past-controls{
+  display:flex
+}
+
+.past-box.open .past-content{
+  display:block
+}
+
+table{
+  width:100%;
+  border-collapse:collapse
+}
+
+th,td{
+  text-align:left;
+  padding:11px 8px;
+  border-top:1px solid var(--line);
+  font-size:14px
+}
+
+th{
+  color:var(--muted);
+  font-weight:700
+}
+
+.status{
+  font-weight:700;
+  color:var(--green)
+}
+
+.footer{
+  margin-top:26px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+  text-align:center
+}
+
+.copyright{
+  font-weight:700;
+  color:var(--ink);
+  margin-top:10px
+}
+
+@media(max-width:800px){
+  header{
+    grid-template-columns:1fr 1fr
+  }
+
+  .title{
+    grid-column:1/-1;
+    border-left:0;
+    border-top:1px solid var(--line);
+    padding:17px 0 0
+  }
+}
+
+@media(max-width:520px){
+  main{
+    padding:18px 14px 34px
+  }
+
+  header{
+    grid-template-columns:1fr;
+    gap:12px
+  }
+
+  .brand-logo,
+  .programme-logo{
+    height:56px;
+    max-width:100%;
+    justify-self:start
+  }
+
+  .title{
+    grid-column:auto
+  }
+
+  h1{
+    font-size:26px
+  }
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<header>
+  <img id="h4cLogo" class="brand-logo" alt="Hope For The Community">
+  <img id="hopeLogo" class="programme-logo" alt="The Hope Programme">
+
+  <div class="title">
+    <h1 id="partnerName">Partner</h1>
+
+    <p class="subtitle">
+      <span id="programmeName">Hope Programme recruitment</span>
+      ·
+      <span id="updated"></span>
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Current and upcoming</h2>
+      <p class="note">
+        Current uptake, quota progress and recent recruitment trend.
+      </p>
+    </div>
+  </div>
+
+  <div id="activeCards" class="cards"></div>
+</section>
+
+<section id="waitSection" class="section">
+  <div class="section-head">
+    <div>
+      <h2>Waiting lists</h2>
+      <p class="note">Current waiting list numbers across South West programmes.</p>
+    </div>
+  </div>
+
+  <div id="waitlists" class="waitlist"></div>
+</section>
+
+<section class="contract-summary" id="contractSummary" style="display:none;">
+  <div class="contract-summary-row">
+    <div>
+      <div class="contract-summary-title">
+        Total recruitment
+      </div>
+
+      <div class="contract-summary-meta">
+        All recruitment to date, including waiting lists.
+      </div>
+    </div>
+
+    <div
+      class="contract-summary-value"
+      id="contractSummaryValue"
+    ></div>
+  </div>
+
+  <div
+    class="contract-summary-meta"
+    id="contractSummaryPercent"
+  ></div>
+
+  <div class="contract-progress">
+    <div
+      class="contract-progress-fill"
+      id="contractProgressFill"
+      style="width:0%"
+    ></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="past-box" id="pastBox">
+
+    <button type="button" class="past-toggle" id="pastToggle">
+      <span id="pastTitle">Past courses</span>
+      <span id="chevron">▾</span>
+    </button>
+
+    <div class="past-controls">
+      <label for="pastRange">Show</label>
+
+      <select id="pastRange">
+        <option value="6">Last 6 months</option>
+        <option value="12" selected>Last 12 months</option>
+        <option value="all">All</option>
+      </select>
+    </div>
+
+    <div class="past-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Programme</th>
+            <th>Course</th>
+            <th>Final bookings</th>
+            <th>Capacity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="pastRows"></tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+  <div>
+    Aggregate recruitment figures only. No participant-level information is displayed.
+  </div>
+
+  <div class="copyright">
+    © 2026 Hope For The Community CIC social enterprise. All rights reserved.
+  </div>
+
+  <div class="copyright" style="margin-top:3px;">
+    Home of the Hope Programme®. You are not alone ♡
+  </div>
+</div>
+
+</main>
+
+<script>
+
+const today = new Date();
+
+function niceDate(v, short=false){
+
+  if(!v) return "";
+
+  const d = new Date(
+    v.includes("T")
+      ? v
+      : v + "T12:00:00"
+  );
+
+  if(Number.isNaN(d.getTime())){
+    return v;
+  }
+
+  return new Intl.DateTimeFormat(
+    "en-GB",
+    short
+      ? {
+          day:"numeric",
+          month:"short",
+          year:"numeric"
+        }
+      : {
+          day:"numeric",
+          month:"long",
+          year:"numeric"
+        }
+  ).format(d);
+}
+
+function niceDateTime(v){
+
+  if(!v) return "";
+
+  const d = new Date(
+    v.includes("T")
+      ? v
+      : v + "T12:00:00"
+  );
+
+  if(Number.isNaN(d.getTime())){
+    return `Updated ${v}`;
+  }
+
+  const date = new Intl.DateTimeFormat(
+    "en-GB",
+    {
+      day:"numeric",
+      month:"long",
+      year:"numeric"
+    }
+  ).format(d);
+
+  if(!v.includes("T")){
+    return `Updated ${date}`;
+  }
+
+  const time = new Intl.DateTimeFormat(
+    "en-GB",
+    {
+      hour:"2-digit",
+      minute:"2-digit",
+      hour12:false,
+      timeZone:"Europe/London"
+    }
+  ).format(d);
+
+  return `Updated ${date} at ${time}`;
+}
+
+function pct(count,target){
+
+  return target>0
+    ? Math.min(
+        100,
+        Math.round(count/target*100)
+      )
+    : 0;
+}
+
+function latestDelta(history){
+
+  if(!history || history.length<2){
+    return null;
+  }
+
+  const h=[...history]
+    .sort((a,b)=>a.date.localeCompare(b.date));
+
+  return Number(h[h.length-1].count)
+    - Number(h[h.length-2].count);
+}
+
+function uptakeBars(history){
+
+  if(!history || history.length<2){
+
+    return `
+      <div class="uptake-wrap">
+        <div class="uptake-title">Weekly uptake</div>
+        <div class="small">Trend will appear after the next update.</div>
+      </div>
+    `;
+  }
+
+  const h=[...history]
+    .sort((a,b)=>a.date.localeCompare(b.date))
+    .slice(-7);
+
+  const changes=[];
+
+  for(let i=1;i<h.length;i++){
+
+    changes.push({
+      date:h[i].date,
+      change:
+        Number(h[i].count||0)
+        - Number(h[i-1].count||0)
+    });
+  }
+
+  const recent=changes.slice(-6);
+
+  const max=Math.max(
+    1,
+    ...recent.map(
+      x=>Math.max(0,x.change)
+    )
+  );
+
+  const rows=recent.map(x=>{
+
+    const width=Math.max(
+      2,
+      Math.round(
+        Math.max(0,x.change)
+        / max
+        * 100
+      )
+    );
+
+    const val=
+      x.change>0
+        ? `+${x.change}`
+        : String(x.change);
+
+    return `
+      <div class="uptake-row">
+
+        <div class="uptake-date">
+          ${niceDate(x.date,true).replace(/ \d{4}$/,"")}
+        </div>
+
+        <div class="uptake-track">
+          <div
+            class="uptake-fill"
+            style="width:${width}%"
+          ></div>
+        </div>
+
+        <div class="uptake-value">
+          ${val}
+        </div>
+
+      </div>
+    `;
+  }).join("");
+
+  return `
+    <div class="uptake-wrap">
+      <div class="uptake-title">Weekly uptake</div>
+      <div class="uptake-bars">${rows}</div>
+    </div>
+  `;
+}
+
+function card(route){
+
+  const hasTarget =
+    Number(route.target || 0) > 0;
+
+  const p =
+    hasTarget
+      ? pct(route.count,route.target)
+      : 0;
+
+  const d =
+    latestDelta(route.history);
+
+  const title =
+    route.type==="self"
+      ? "Self-guided"
+      : niceDate(route.date,true);
+
+  const unit =
+    route.type==="self"
+      ? "registrations"
+      : "places booked";
+
+  const delta =
+    d===null
+      ? ``
+      : d>0
+        ? `<div class="delta">↗ +${d} since last update</div>`
+        : d===0
+          ? `<div class="delta neutral">No change since last update</div>`
+          : `<div class="delta" style="color:#a03a3a">↘ ${d} since last update</div>`;
+
+  const el=document.createElement("article");
+
+  el.className=
+    "card "
+    + (
+      route.type==="self"
+        ? "self"
+        : ""
+    );
+
+  const gauge =
+    hasTarget
+      ? `
+        <div class="gauge" style="--p:${p}">
+          <span>${p}%</span>
+        </div>
+      `
+      : "";
+
+  const targetText =
+    hasTarget
+      ? `of ${Number(route.target).toLocaleString("en-GB")} ${unit}`
+      : unit;
+
+  el.innerHTML=`
+
+    <div class="card-top">
+
+      ${gauge}
+
+      <div>
+
+        <div class="programme-name">
+          ${route.programme || ""}
+        </div>
+
+        <div class="card-title">
+          ${title}
+        </div>
+
+        <div class="big">
+          ${Number(route.count).toLocaleString("en-GB")}
+        </div>
+
+        <div class="small">
+          ${targetText}
+        </div>
+
+      </div>
+
+    </div>
+
+    ${delta}
+
+    ${uptakeBars(route.history)}
+
+  `;
+
+  return el;
+}
+
+function renderContractSummary(data,cfg){
+
+  const target=
+    Number(cfg.contractTarget || 0);
+
+  if(!target){
+    return;
+  }
+
+  const routeTotal=
+    (data.routes || [])
+      .reduce(
+        (sum,route)=>
+          sum + Number(route.count || 0),
+        0
+      );
+
+  const waitlistTotal=
+    (data.waitlists || [])
+      .reduce(
+        (sum,item)=>
+          sum + Number(item.count || 0),
+        0
+      );
+
+  const total=
+    routeTotal + waitlistTotal;
+
+  const percent=
+    Math.round(
+      total / target * 100
+    );
+
+  document.getElementById(
+    "contractSummaryValue"
+  ).textContent=
+    `${total.toLocaleString("en-GB")} of ${target.toLocaleString("en-GB")}`;
+
+  document.getElementById(
+    "contractSummaryPercent"
+  ).textContent=
+    `${percent}% of contract target`;
+
+  document.getElementById(
+    "contractProgressFill"
+  ).style.width=
+    `${Math.min(100,Math.max(0,percent))}%`;
+
+  document.getElementById(
+    "contractSummary"
+  ).style.display="";
+}
+
+function isPast(route){
+
+  return (
+    route.type==="group"
+    &&
+    route.date
+    &&
+    new Date(
+      route.date+"T12:00:00"
+    ) < today
+  );
+}
+
+function renderPast(routes,months){
+
+  const body=
+    document.getElementById("pastRows");
+
+  body.innerHTML="";
+
+  let past=
+    routes.filter(isPast);
+
+  if(months!=="all"){
+
+    const cutoff=
+      new Date(today);
+
+    cutoff.setMonth(
+      cutoff.getMonth()
+      - Number(months)
+    );
+
+    past=
+      past.filter(
+        r=>
+          new Date(
+            r.date+"T12:00:00"
+          ) >= cutoff
+      );
+  }
+
+  past.sort(
+    (a,b)=>
+      b.date.localeCompare(a.date)
+  );
+
+  document.getElementById(
+    "pastTitle"
+  ).textContent=
+    `Past courses (${past.length})`;
+
+  if(!past.length){
+
+    body.innerHTML=`
+      <tr>
+        <td colspan="5">
+          No past courses in this period.
+        </td>
+      </tr>
+    `;
+
+    return;
+  }
+
+  past.forEach(r=>{
+
+    const tr=
+      document.createElement("tr");
+
+    tr.innerHTML=`
+
+      <td>${r.programme || ""}</td>
+
+      <td>${niceDate(r.date,true)}</td>
+
+      <td>
+        ${Number(r.count).toLocaleString("en-GB")}
+      </td>
+
+      <td>
+        ${Number(r.target).toLocaleString("en-GB")}
+      </td>
+
+      <td class="status">
+        ${
+          Number(r.count)>=Number(r.target)
+            ? "Full"
+            : "Closed"
+        }
+      </td>
+
+    `;
+
+    body.appendChild(tr);
+  });
+}
+
+async function load(){
+
+  const [cfg,data]=
+    await Promise.all([
+
+      fetch(
+        "config.json",
+        {cache:"no-store"}
+      ).then(r=>r.json()),
+
+      fetch(
+        "data.json",
+        {cache:"no-store"}
+      ).then(r=>r.json())
+
+    ]);
+
+  document.title=
+    `${cfg.partnerName} – Hope Programme recruitment`;
+
+  document.getElementById(
+    "partnerName"
+  ).textContent=
+    cfg.partnerName;
+
+  document.getElementById(
+    "programmeName"
+  ).textContent=
+    cfg.programmeName;
+
+  document.getElementById(
+    "updated"
+  ).textContent=
+    niceDateTime(data.updatedAt);
+
+  document.getElementById(
+    "h4cLogo"
+  ).src=
+    cfg.h4cLogo;
+
+  document.getElementById(
+    "hopeLogo"
+  ).src=
+    cfg.hopeProgrammeLogo;
+
+  const active=
+    (data.routes || [])
+      .filter(
+        r=>
+          r.type==="self"
+          ||
+          !isPast(r)
+      );
+
+  active.sort((a,b)=>{
+
+    if(a.type==="self" && b.type!=="self"){
+      return 1;
+    }
+
+    if(b.type==="self" && a.type!=="self"){
+      return -1;
+    }
+
+    if(a.type==="self" && b.type==="self"){
+      return String(a.programme)
+        .localeCompare(String(b.programme));
+    }
+
+    return String(a.date)
+      .localeCompare(String(b.date));
+  });
+
+  const cards=
+    document.getElementById(
+      "activeCards"
+    );
+
+  cards.innerHTML="";
+
+  active.forEach(
+    r=>
+      cards.appendChild(
+        card(r)
+      )
+  );
+
+  const wait=
+    document.getElementById(
+      "waitlists"
+    );
+
+  wait.innerHTML="";
+
+  (data.waitlists || [])
+    .filter(x=>Number(x.count || 0)>0)
+    .forEach(x=>{
+
+      const div=
+        document.createElement("div");
+
+      div.className="wait";
+
+      div.innerHTML=`
+
+        <div class="wait-programme">
+          ${x.programme || ""}
+        </div>
+
+        <strong>
+          ${Number(x.count || 0).toLocaleString("en-GB")}
+        </strong>
+
+        ${x.name}
+
+      `;
+
+      wait.appendChild(div);
+    });
+
+  const positiveWaitlists=
+    (data.waitlists || [])
+      .filter(
+        x=>Number(x.count || 0)>0
+      );
+
+  document.getElementById(
+    "waitSection"
+  ).style.display=
+    positiveWaitlists.length
+      ? ""
+      : "none";
+
+  renderContractSummary(
+    data,
+    cfg
+  );
+
+  const range=
+    document.getElementById(
+      "pastRange"
+    );
+
+  range.value=
+    String(
+      cfg.pastDefaultMonths || 12
+    );
+
+  renderPast(
+    data.routes || [],
+    range.value
+  );
+
+  range.addEventListener(
+    "change",
+    ()=>
+      renderPast(
+        data.routes || [],
+        range.value
+      )
+  );
+
+  const box=
+    document.getElementById(
+      "pastBox"
+    );
+
+  document.getElementById(
+    "pastToggle"
+  ).addEventListener(
+    "click",
+    ()=>{
+
+      box.classList.toggle("open");
+
+      document.getElementById(
+        "chevron"
+      ).textContent=
+        box.classList.contains("open")
+          ? "▴"
+          : "▾";
+    }
+  );
+}
+
+load();
+
+</script>
+
+</body>
+</html>
