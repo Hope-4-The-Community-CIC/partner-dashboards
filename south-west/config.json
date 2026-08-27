@@ -1,1 +1,53 @@
-
+{
+  "partnerName": "NHS South West",
+  "programmeName": "Hope Programme recruitment",
+  "h4cLogo": "assets/h4c-logo.png",
+  "hopeProgrammeLogo": "assets/hope-programme-logo.png",
+  "partnerLogo": "",
+  "showWaitlists": true,
+  "pastDefaultMonths": 12,
+  "contractTarget": 15000,
+  "weeklySnapshotWeekday": 3,
+  "qualtricsSources": [
+    {
+      "programme": "NHS SW LTC",
+      "surveyId": "SV_eWCBJOdFISxfqrc",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_eWCBJOdFISxfqrc?format=csv"
+    },
+    {
+      "programme": "Hope Move",
+      "surveyId": "SV_2fyb04ACv3tIiai",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_2fyb04ACv3tIiai?format=csv"
+    },
+    {
+      "programme": "St Austell PMOS",
+      "surveyId": "SV_5uVVIPyfM6rClkG",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_5uVVIPyfM6rClkG?format=csv"
+    },
+    {
+      "programme": "Parents of autistic children",
+      "surveyId": "SV_0HS5pPyAu2G4b2K",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_0HS5pPyAu2G4b2K?format=csv"
+    },
+    {
+      "programme": "Carers",
+      "surveyId": "SV_9Y6kM1qmA3waKiO",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_9Y6kM1qmA3waKiO?format=csv"
+    },
+    {
+      "programme": "Long Covid",
+      "surveyId": "SV_aYmbmFzuzRtIh9A",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_aYmbmFzuzRtIh9A?format=csv"
+    },
+    {
+      "programme": "Carers – Help & Care Dorset",
+      "surveyId": "SV_9mLJtv7yhBwV0rQ",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_9mLJtv7yhBwV0rQ?format=csv"
+    },
+    {
+      "programme": "Parents of autistic children – Help & Care Dorset",
+      "surveyId": "SV_e5KRFpWDrAe87l4",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_e5KRFpWDrAe87l4?format=csv"
+    }
+  ]
+}
