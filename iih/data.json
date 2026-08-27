@@ -1,1 +1,182 @@
-
+{
+  "updatedAt": "2026-08-27T21:01+01:00",
+  "routes": [
+    {
+      "id": "group-iih-2023-01-12",
+      "name": "12/01/2023",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2023-01-12",
+      "count": 34,
+      "target": 34,
+      "history": []
+    },
+    {
+      "id": "group-iih-2023-04-20",
+      "name": "20/04/2023",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2023-04-20",
+      "count": 70,
+      "target": 70,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2023-04-20",
+      "name": "20/04/2023",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2023-04-20",
+      "count": 9,
+      "target": 9,
+      "history": []
+    },
+    {
+      "id": "group-iih-2023-09-14",
+      "name": "14/09/2023",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2023-09-14",
+      "count": 60,
+      "target": 60,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2023-09-14",
+      "name": "14/09/2023",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2023-09-14",
+      "count": 4,
+      "target": 4,
+      "history": []
+    },
+    {
+      "id": "group-iih-2024-03-11",
+      "name": "11/03/2024",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2024-03-11",
+      "count": 63,
+      "target": 63,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2024-03-11",
+      "name": "11/03/2024",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2024-03-11",
+      "count": 5,
+      "target": 5,
+      "history": []
+    },
+    {
+      "id": "group-iih-2024-10-24",
+      "name": "24/10/2024",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2024-10-24",
+      "count": 69,
+      "target": 69,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2024-10-24",
+      "name": "24/10/2024",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2024-10-24",
+      "count": 7,
+      "target": 7,
+      "history": []
+    },
+    {
+      "id": "group-iih-2025-03-19",
+      "name": "19/03/2025",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2025-03-19",
+      "count": 67,
+      "target": 67,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2025-03-19",
+      "name": "19/03/2025",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2025-03-19",
+      "count": 13,
+      "target": 13,
+      "history": []
+    },
+    {
+      "id": "group-iih-2025-09-17",
+      "name": "17/09/2025",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2025-09-17",
+      "count": 104,
+      "target": 104,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2025-09-17",
+      "name": "17/09/2025",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2025-09-17",
+      "count": 12,
+      "target": 12,
+      "history": []
+    },
+    {
+      "id": "group-iih-2026-02-11",
+      "name": "11/02/2026",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2026-02-11",
+      "count": 51,
+      "target": 51,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2026-02-11",
+      "name": "11/02/2026",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2026-02-11",
+      "count": 3,
+      "target": 3,
+      "history": []
+    },
+    {
+      "id": "group-iih-2026-09-16",
+      "name": "16/09/2026",
+      "programme": "Hope Programme for people living with IIH",
+      "type": "group",
+      "date": "2026-09-16",
+      "count": 31,
+      "target": 100,
+      "history": []
+    },
+    {
+      "id": "group-iih-parents-2026-09-16",
+      "name": "16/09/2026",
+      "programme": "Hope Programme for parents of children with IIH",
+      "type": "group",
+      "date": "2026-09-16",
+      "count": 6,
+      "target": 100,
+      "history": []
+    }
+  ],
+  "waitlists": [
+    {
+      "programme": "IIH UK",
+      "name": "Waiting list",
+      "count": 0
+    }
+  ]
+}
