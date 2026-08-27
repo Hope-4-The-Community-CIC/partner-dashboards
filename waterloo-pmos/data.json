@@ -4,7 +4,7 @@
     {
       "id": "group-pmos-2026-10-07",
       "name": "07/10/2026",
-      "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+      "programme": "Hope for PMOS",
       "type": "group",
       "date": "2026-10-07",
       "count": 0,
@@ -20,7 +20,7 @@
     {
       "id": "group-pmos-2027-01-27",
       "name": "27/01/2027",
-      "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+      "programme": "Hope for PMOS",
       "type": "group",
       "date": "2027-01-27",
       "count": 0,
@@ -36,7 +36,7 @@
     {
       "id": "group-pmos-2027-03-24",
       "name": "24/03/2027",
-      "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+      "programme": "Hope for PMOS",
       "type": "group",
       "date": "2027-03-24",
       "count": 0,
@@ -52,7 +52,7 @@
     {
       "id": "self-guided-pmos",
       "name": "Self-guided",
-      "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+      "programme": "Hope for PMOS",
       "type": "self",
       "date": null,
       "count": 0,
