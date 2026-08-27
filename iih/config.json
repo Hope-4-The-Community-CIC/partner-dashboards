@@ -8,7 +8,12 @@
   "pastDefaultMonths": 12,
   "qualtricsSources": [
     {
-      "programme": "IIH Hope Programme",
+      "programme": "Hope Programme for people living with IIH",
+      "surveyId": "SV_3HHkn8cNELN9Ito",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_3HHkn8cNELN9Ito?format=csv"
+    },
+    {
+      "programme": "Hope Programme for parents of children with IIH",
       "surveyId": "SV_3HHkn8cNELN9Ito",
       "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_3HHkn8cNELN9Ito?format=csv"
     }
