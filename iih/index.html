@@ -1026,15 +1026,16 @@ async function load(){
         r=>!isPast(r)
       );
 
-  active.sort(
-    (a,b)=>
-      String(a.programme)
-        .localeCompare(
-          String(b.programme)
-        )
-  );
+ active.sort((a,b)=>{
 
-  const cards=
+  const order = {
+    "Hope Programme for people living with IIH": 1,
+    "Hope Programme for parents of children with IIH": 2
+  };
+
+  return (order[a.programme] || 99)
+    - (order[b.programme] || 99);
+});
     document.getElementById(
       "activeCards"
     );
