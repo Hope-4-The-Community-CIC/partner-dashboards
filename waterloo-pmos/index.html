@@ -828,51 +828,62 @@ function card(route){
 
   el.className="card";
 
-  if(isSelf){
+if(isSelf){
 
-    el.innerHTML=`
+  const selfTarget = Number(route.target || 0);
+  const selfCount = Number(route.count || 0);
 
-      <div class="card-top">
+  const selfPct =
+    selfTarget > 0
+      ? Math.min(
+          100,
+          Math.round(selfCount / selfTarget * 100)
+        )
+      : 0;
 
-        <div
-          class="gauge"
-          style="--p:0"
-        >
-          <span>
-            ${Number(route.count || 0).toLocaleString("en-GB")}
-          </span>
+  el.innerHTML=`
+
+    <div class="card-top">
+
+      <div
+        class="gauge"
+        style="--p:${selfPct}"
+      >
+        <span>
+          ${selfPct}%
+        </span>
+      </div>
+
+      <div>
+
+        <div class="programme-name">
+          ${route.programme || ""}
         </div>
 
-        <div>
+        <div class="card-title">
+          Self-guided
+        </div>
 
-          <div class="programme-name">
-            ${route.programme || ""}
-          </div>
+        <div class="big">
+          ${selfCount.toLocaleString("en-GB")}
+        </div>
 
-          <div class="card-title">
-            Self-guided
-          </div>
-
-          <div class="big">
-            ${Number(route.count || 0).toLocaleString("en-GB")}
-          </div>
-
-          <div class="small">
-            enrolled
-          </div>
-
+        <div class="small">
+          of ${selfTarget.toLocaleString("en-GB")} enrolled
         </div>
 
       </div>
 
-      ${delta}
+    </div>
 
-      ${uptakeBars(route.history)}
+    ${delta}
 
-    `;
+    ${uptakeBars(route.history)}
 
-    return el;
-  }
+  `;
+
+  return el;
+}
 
   el.innerHTML=`
 
