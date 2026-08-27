@@ -44,3 +44,14 @@
     }
   ]
 }
+{
+  "id": "self-guided-pmos",
+  "name": "Self-guided",
+  "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+  "type": "self",
+  "date": null,
+  "count": 0,
+  "target": 0,
+  "cohort": "TO BE ADDED",
+  "history": []
+}
