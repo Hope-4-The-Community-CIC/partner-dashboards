@@ -1036,12 +1036,14 @@ async function load(){
   return (order[a.programme] || 99)
     - (order[b.programme] || 99);
 });
-    document.getElementById(
-      "activeCards"
-    );
 
-  cards.innerHTML="";
+const cards =
+  document.getElementById(
+    "activeCards"
+  );
 
+cards.innerHTML="";
+  
   active.forEach(
     r=>
       cards.appendChild(
