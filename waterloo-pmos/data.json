@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T23:15+01:00",
+  "updatedAt": "2026-08-27T17:00:00+01:00",
   "routes": [
     {
       "id": "group-pmos-2026-10-07",
@@ -33,6 +33,17 @@
       "target": 80,
       "history": [],
       "source": "SV_0ijX8x8CTXPMcTk"
+    },
+    {
+      "id": "self-guided-pmos",
+      "name": "Self-guided",
+      "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+      "type": "self",
+      "date": null,
+      "count": 0,
+      "target": 0,
+      "cohort": "TO BE ADDED",
+      "history": []
     }
   ],
   "waitlists": [
@@ -43,15 +54,4 @@
       "source": "SV_0ijX8x8CTXPMcTk"
     }
   ]
-}
-{
-  "id": "self-guided-pmos",
-  "name": "Self-guided",
-  "programme": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
-  "type": "self",
-  "date": null,
-  "count": 0,
-  "target": 0,
-  "cohort": "TO BE ADDED",
-  "history": []
 }
