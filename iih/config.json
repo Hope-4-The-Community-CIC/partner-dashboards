@@ -1,1 +1,16 @@
-
+{
+  "partnerName": "IIH UK",
+  "programmeName": "Hope Programme recruitment",
+  "h4cLogo": "assets/h4c-logo.png",
+  "hopeProgrammeLogo": "assets/hope-programme-logo.png",
+  "partnerLogo": "",
+  "showWaitlists": true,
+  "pastDefaultMonths": 12,
+  "qualtricsSources": [
+    {
+      "programme": "IIH Hope Programme",
+      "surveyId": "SV_3HHkn8cNELN9Ito",
+      "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_3HHkn8cNELN9Ito?format=csv"
+    }
+  ]
+}
