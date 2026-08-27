@@ -1,1 +1,12 @@
-
+{
+  "partnerName": "Waterloo Foundation",
+  "programmeName": "Hope Programme for polyendocrine metabolic ovarian syndrome (PMOS)",
+  "partnerLine": "Delivered with Cysters and PCOS Relief",
+  "h4cLogo": "assets/h4c-logo.png",
+  "hopeProgrammeLogo": "assets/hope-programme-logo.png",
+  "partnerLogo": "",
+  "showWaitlists": true,
+  "pastDefaultMonths": 12,
+  "qualtricsCsvUrl": "https://coventryhls.fra1.qualtrics.com/public-quotas/api/v0/download/surveys/SV_0ijX8x8CTXPMcTk?format=csv",
+  "weeklySnapshotWeekday": 3
+}
