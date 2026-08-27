@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T23:57+01:00",
+  "updatedAt": "2026-08-28T00:07+01:00",
   "routes": [
     {
       "id": "group-pmos-2026-10-07",
@@ -8,7 +8,7 @@
       "type": "group",
       "date": "2026-10-07",
       "count": 0,
-      "target": 80,
+      "target": 70,
       "history": [
         {
           "date": "2026-08-27",
@@ -24,7 +24,7 @@
       "type": "group",
       "date": "2027-01-27",
       "count": 0,
-      "target": 80,
+      "target": 70,
       "history": [
         {
           "date": "2026-08-27",
@@ -40,7 +40,7 @@
       "type": "group",
       "date": "2027-03-24",
       "count": 0,
-      "target": 80,
+      "target": 70,
       "history": [
         {
           "date": "2026-08-27",
