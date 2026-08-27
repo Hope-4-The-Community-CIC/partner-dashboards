@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T09:45+01:00",
+  "updatedAt": "2026-08-27T10:00+01:00",
   "routes": [
     {
       "id": "group-2026-06-24",
@@ -84,7 +84,7 @@
       "name": "Self-guided",
       "type": "self",
       "date": null,
-      "count": 92,
+      "count": 106,
       "target": 300,
       "cohort": "NCPCN-LTC-SELF-140726",
       "historyStartsAtZero": true,
@@ -108,6 +108,10 @@
         {
           "date": "2026-08-20",
           "count": 92
+        },
+        {
+          "date": "2026-08-27",
+          "count": 106
         }
       ]
     }
