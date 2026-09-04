@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T23:30+01:00",
+  "updatedAt": "2026-09-04T23:40+01:00",
   "routes": [
     {
       "id": "group-2026-06-24",
@@ -134,11 +134,11 @@
   ],
   "waitlists": [
     {
-      "name": "From PCN area  - group course full",
+      "name": "Waitlist - from PCN area  - group course full",
       "count": 0
     },
     {
-      "name": "Outside Newport & Central PCN area",
+      "name": "Waitlist - outside PCN area",
       "count": 7
     }
   ]

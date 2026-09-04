@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T23:30+01:00",
+  "updatedAt": "2026-09-04T23:40+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -689,7 +689,7 @@
       "programme": "Parents of autistic children with Dorset Help & Care",
       "type": "group",
       "date": "2026-09-09",
-      "count": 17,
+      "count": 28,
       "target": 100,
       "source": "SV_0HS5pPyAu2G4b2K",
       "history": []
@@ -700,7 +700,7 @@
       "programme": "NHS SW LTC",
       "type": "group",
       "date": "2026-09-16",
-      "count": 23,
+      "count": 28,
       "target": 80,
       "source": "SV_eWCBJOdFISxfqrc",
       "history": []
@@ -711,7 +711,7 @@
       "programme": "Long Covid",
       "type": "group",
       "date": "2026-09-30",
-      "count": 27,
+      "count": 30,
       "target": 100,
       "source": "SV_aYmbmFzuzRtIh9A",
       "history": []
@@ -722,7 +722,7 @@
       "programme": "Carers with Dorset Help & Care",
       "type": "group",
       "date": "2026-10-21",
-      "count": 6,
+      "count": 7,
       "target": 100,
       "source": "SV_9Y6kM1qmA3waKiO",
       "history": []
@@ -766,86 +766,18 @@
           "count": 610
         }
       ]
+    },
+    {
+      "id": "group-nhs-sw-ltc-2026-11-04",
+      "name": "04/11/2026",
+      "programme": "NHS SW LTC",
+      "type": "group",
+      "date": "2026-11-04",
+      "count": 1,
+      "target": 80,
+      "source": "SV_eWCBJOdFISxfqrc",
+      "history": []
     }
   ],
-  "waitlists": [
-    {
-      "programme": "Hope Move",
-      "name": "Waiting list",
-      "count": 4,
-      "source": "SV_2fyb04ACv3tIiai"
-    },
-    {
-      "programme": "St Austell PMOS",
-      "name": "Waiting list - SW",
-      "count": 1,
-      "source": "SV_5uVVIPyfM6rClkG"
-    },
-    {
-      "programme": "St Austell PMOS",
-      "name": "Waiting list - non-SW",
-      "count": 1,
-      "source": "SV_5uVVIPyfM6rClkG"
-    },
-    {
-      "programme": "Long Covid",
-      "name": "Waiting list SW",
-      "count": 0,
-      "source": "SV_aYmbmFzuzRtIh9A"
-    },
-    {
-      "programme": "Long Covid",
-      "name": "Waiting list non SW",
-      "count": 0,
-      "source": "SV_aYmbmFzuzRtIh9A"
-    },
-    {
-      "programme": "NHS SW LTC",
-      "name": "Waiting list SW",
-      "count": 0,
-      "source": "SV_eWCBJOdFISxfqrc"
-    },
-    {
-      "programme": "NHS SW LTC",
-      "name": "Waiting list non-SW",
-      "count": 0,
-      "source": "SV_eWCBJOdFISxfqrc"
-    },
-    {
-      "programme": "Parents of autistic children",
-      "name": "Waiting list – South West",
-      "count": 0,
-      "sources": [
-        "SV_0HS5pPyAu2G4b2K",
-        "SV_e5KRFpWDrAe87l4"
-      ]
-    },
-    {
-      "programme": "Parents of autistic children",
-      "name": "Waiting list – outside South West",
-      "count": 0,
-      "sources": [
-        "SV_0HS5pPyAu2G4b2K",
-        "SV_e5KRFpWDrAe87l4"
-      ]
-    },
-    {
-      "programme": "Carers",
-      "name": "Waiting list – South West",
-      "count": 0,
-      "sources": [
-        "SV_9Y6kM1qmA3waKiO",
-        "SV_9mLJtv7yhBwV0rQ"
-      ]
-    },
-    {
-      "programme": "Carers",
-      "name": "Waiting list – outside South West",
-      "count": 0,
-      "sources": [
-        "SV_9Y6kM1qmA3waKiO",
-        "SV_9mLJtv7yhBwV0rQ"
-      ]
-    }
-  ]
+  "waitlists": []
 }
