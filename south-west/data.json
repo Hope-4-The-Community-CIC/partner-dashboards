@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-04T14:45:00+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -737,12 +737,8 @@
       "target": 1000,
       "cohort": "MSKMOVE-SELF-081125",
       "history": [
-        {
-          "date": "2026-08-06",
-          "count": 191
-        },
-        {
-          "date": "2026-09-03",
+       {
+          "date": "2026-09-04",
           "count": 265
         }
       ]
@@ -758,11 +754,7 @@
       "cohort": "NHS SW-LTC-SELF-120824",
       "history": [
         {
-          "date": "2026-08-06",
-          "count": 626
-        },
-        {
-          "date": "2026-09-03",
+          "date": "2026-09-04",
           "count": 610
         }
       ]
