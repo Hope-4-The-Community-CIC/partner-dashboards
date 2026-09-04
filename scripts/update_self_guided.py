@@ -5,6 +5,7 @@ import os
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -172,7 +173,11 @@ history.sort(
 )
 
 
-data["updatedAt"] = latest_date
+from zoneinfo import ZoneInfo
+
+data["updatedAt"] = datetime.now(
+    ZoneInfo("Europe/London")
+).isoformat(timespec="minutes")
 
 
 with open(data_file, "w", encoding="utf-8") as f:
