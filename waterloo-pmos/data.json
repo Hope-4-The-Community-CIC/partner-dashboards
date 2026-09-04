@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T12:44+01:00",
+  "updatedAt": "2026-09-04T13:35+01:00",
   "routes": [
     {
       "id": "group-pmos-2026-10-07",
@@ -7,7 +7,7 @@
       "programme": "Hope for PMOS",
       "type": "group",
       "date": "2026-10-07",
-      "count": 2,
+      "count": 3,
       "target": 70,
       "history": [
         {
