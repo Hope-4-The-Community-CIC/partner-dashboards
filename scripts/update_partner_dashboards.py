@@ -1348,6 +1348,9 @@ def update_south_west(
 
         if not details:
             continue
+                
+        if survey_id == "SV_5uVVIPyfM6rClkG":
+            continue
 
         for item in collect_waitlists(
             details["rows"]
