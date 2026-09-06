@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T10:00+01:00",
+  "updatedAt": "2026-09-06T10:01+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -689,7 +689,7 @@
       "programme": "Parents of autistic children with Dorset Help & Care",
       "type": "group",
       "date": "2026-09-09",
-      "count": 28,
+      "count": 31,
       "target": 100,
       "source": "SV_0HS5pPyAu2G4b2K",
       "history": []
