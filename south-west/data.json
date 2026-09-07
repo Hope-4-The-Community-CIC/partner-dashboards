@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T11:30+01:00",
+  "updatedAt": "2026-09-07T11:44+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -711,7 +711,7 @@
       "programme": "Long Covid",
       "type": "group",
       "date": "2026-09-30",
-      "count": 30,
+      "count": 31,
       "target": 100,
       "source": "SV_aYmbmFzuzRtIh9A",
       "history": []
