@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T14:45+01:00",
+  "updatedAt": "2026-09-08T14:51+01:00",
   "routes": [
     {
       "id": "group-2026-06-24",
@@ -36,7 +36,7 @@
       "name": "09/09/2026",
       "type": "group",
       "date": "2026-09-09",
-      "count": 29,
+      "count": 30,
       "target": 100,
       "history": [
         {
@@ -66,7 +66,7 @@
       "name": "04/11/2026",
       "type": "group",
       "date": "2026-11-04",
-      "count": 17,
+      "count": 18,
       "target": 100,
       "history": [
         {
