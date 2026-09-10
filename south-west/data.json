@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T01:30+01:00",
+  "updatedAt": "2026-09-10T01:34+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -703,7 +703,12 @@
       "count": 30,
       "target": 80,
       "source": "SV_eWCBJOdFISxfqrc",
-      "history": []
+      "history": [
+        {
+          "date": "2026-09-10",
+          "count": 30
+        }
+      ]
     },
     {
       "id": "group-long-covid-2026-09-30",
@@ -714,7 +719,12 @@
       "count": 32,
       "target": 100,
       "source": "SV_aYmbmFzuzRtIh9A",
-      "history": []
+      "history": [
+        {
+          "date": "2026-09-10",
+          "count": 32
+        }
+      ]
     },
     {
       "id": "group-carers-2026-10-21",
@@ -725,7 +735,12 @@
       "count": 8,
       "target": 100,
       "source": "SV_9Y6kM1qmA3waKiO",
-      "history": []
+      "history": [
+        {
+          "date": "2026-09-10",
+          "count": 8
+        }
+      ]
     },
     {
       "id": "self-guided-hope-move",
@@ -776,7 +791,12 @@
       "count": 1,
       "target": 80,
       "source": "SV_eWCBJOdFISxfqrc",
-      "history": []
+      "history": [
+        {
+          "date": "2026-09-10",
+          "count": 1
+        }
+      ]
     }
   ],
   "waitlists": []
