@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T13:45+01:00",
+  "updatedAt": "2026-09-17T13:51+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -716,7 +716,7 @@
       "programme": "Long Covid",
       "type": "group",
       "date": "2026-09-30",
-      "count": 34,
+      "count": 35,
       "target": 100,
       "source": "SV_aYmbmFzuzRtIh9A",
       "history": [
@@ -726,7 +726,7 @@
         },
         {
           "date": "2026-09-17",
-          "count": 34
+          "count": 35
         }
       ]
     },
@@ -736,7 +736,7 @@
       "programme": "Carers with Dorset Help & Care",
       "type": "group",
       "date": "2026-10-21",
-      "count": 16,
+      "count": 17,
       "target": 100,
       "source": "SV_9Y6kM1qmA3waKiO",
       "history": [
@@ -746,7 +746,7 @@
         },
         {
           "date": "2026-09-17",
-          "count": 16
+          "count": 17
         }
       ]
     },
