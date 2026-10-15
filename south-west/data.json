@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T09:30+01:00",
+  "updatedAt": "2026-10-15T09:45+01:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -820,7 +820,7 @@
       "programme": "NHS SW LTC",
       "type": "self",
       "date": null,
-      "count": 634,
+      "count": 0,
       "target": 3000,
       "cohort": "NHS SW-LTC-SELF-120824",
       "history": [
@@ -851,6 +851,10 @@
         {
           "date": "2026-10-08",
           "count": 634
+        },
+        {
+          "date": "2026-10-15",
+          "count": 0
         }
       ]
     },
