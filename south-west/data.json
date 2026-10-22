@@ -776,7 +776,7 @@
       "programme": "Hope Move",
       "type": "self",
       "date": null,
-      "count": 310,
+      "count": 323,
       "target": 1000,
       "cohort": "MSKMOVE-SELF-081125",
       "history": [
@@ -815,6 +815,10 @@
         {
           "date": "2026-10-15",
           "count": 310
+        },
+        {
+          "date": "2026-10-22",
+          "count": 323
         }
       ]
     },
