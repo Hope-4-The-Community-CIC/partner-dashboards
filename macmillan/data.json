@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-29T08:45+00:00",
+  "updatedAt": "2026-10-29T09:01+00:00",
   "routes": [
     {
       "id": "self-guided-macmillan",
       "name": "Self-guided",
       "type": "self",
       "date": null,
-      "count": 634,
+      "count": 645,
       "target": 5000,
       "cohort": "MACMILLAN-SELF-210824",
       "history": [
@@ -57,6 +57,10 @@
         {
           "date": "2026-10-22",
           "count": 634
+        },
+        {
+          "date": "2026-10-29",
+          "count": 645
         }
       ]
     },
