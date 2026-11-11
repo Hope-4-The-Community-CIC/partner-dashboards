@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T11:15+00:00",
+  "updatedAt": "2026-11-11T11:26+00:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -977,6 +977,17 @@
           "count": 2
         }
       ]
+    },
+    {
+      "id": "group-long-covid-2027-01-27",
+      "name": "27/01/2027",
+      "programme": "Long Covid",
+      "type": "group",
+      "date": "2027-01-27",
+      "count": 2,
+      "target": 100,
+      "source": "SV_aYmbmFzuzRtIh9A",
+      "history": []
     }
   ],
   "waitlists": []
