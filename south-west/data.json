@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T01:00+00:00",
+  "updatedAt": "2026-11-12T01:07+00:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -943,6 +943,10 @@
         {
           "date": "2026-11-05",
           "count": 0
+        },
+        {
+          "date": "2026-11-12",
+          "count": 1
         }
       ]
     },
@@ -975,6 +979,10 @@
         {
           "date": "2026-11-05",
           "count": 2
+        },
+        {
+          "date": "2026-11-12",
+          "count": 2
         }
       ]
     },
@@ -987,7 +995,12 @@
       "count": 2,
       "target": 100,
       "source": "SV_aYmbmFzuzRtIh9A",
-      "history": []
+      "history": [
+        {
+          "date": "2026-11-12",
+          "count": 2
+        }
+      ]
     }
   ],
   "waitlists": []
