@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T09:15+00:00",
+  "updatedAt": "2026-11-19T09:30+00:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -776,7 +776,7 @@
       "programme": "Hope Move",
       "type": "self",
       "date": null,
-      "count": 0,
+      "count": 358,
       "target": 1000,
       "cohort": "MSKMOVE-SELF-081125",
       "history": [
@@ -830,7 +830,7 @@
         },
         {
           "date": "2026-11-19",
-          "count": 0
+          "count": 358
         }
       ]
     },
