@@ -840,7 +840,7 @@
       "programme": "NHS SW LTC",
       "type": "self",
       "date": null,
-      "count": 0,
+      "count": 696,
       "target": 3000,
       "cohort": "NHS SW-LTC-SELF-120824",
       "history": [
@@ -890,7 +890,7 @@
         },
         {
           "date": "2026-11-19",
-          "count": 0
+          "count": 696
         }
       ]
     },
