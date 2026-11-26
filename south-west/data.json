@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:30+00:00",
+  "updatedAt": "2026-11-26T04:34+00:00",
   "routes": [
     {
       "id": "group-long-covid-2022-06-01",
@@ -959,6 +959,10 @@
         {
           "date": "2026-11-19",
           "count": 6
+        },
+        {
+          "date": "2026-11-26",
+          "count": 8
         }
       ]
     },
@@ -999,6 +1003,10 @@
         {
           "date": "2026-11-19",
           "count": 2
+        },
+        {
+          "date": "2026-11-26",
+          "count": 2
         }
       ]
     },
@@ -1008,7 +1016,7 @@
       "programme": "Long Covid",
       "type": "group",
       "date": "2027-01-27",
-      "count": 6,
+      "count": 7,
       "target": 100,
       "source": "SV_aYmbmFzuzRtIh9A",
       "history": [
@@ -1019,6 +1027,10 @@
         {
           "date": "2026-11-19",
           "count": 3
+        },
+        {
+          "date": "2026-11-26",
+          "count": 7
         }
       ]
     }
